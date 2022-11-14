@@ -13,7 +13,7 @@ pipeline {
     }
     stage('build image') {
       steps {
-        sh 'rm -fr jenkins-example-ghcr'
+        sh 'rm -fr ubi_build'
         sh 'git clone https://github.com/supawatp/ubi_build.git'
         sh 'docker build -t $IMAGE_NAME:$IMAGE_VERSION .'
       }
