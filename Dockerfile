@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal
+FROM registry.access.redhat.com/ubi8/ubi-minimal:8.4-212
 RUN microdnf install -y python3
 WORKDIR /app
 COPY ./requirements.txt ./app ./
